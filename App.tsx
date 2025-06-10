@@ -1,16 +1,15 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-import { Text } from './src/components/Text';
+import {ThemeProvider} from '@shopify/restyle';
+import {theme} from './src/theme/theme';
+import { LoginScreen } from './src/screens/auth/LoginScreen/LoginScreen';
+
 
 function App(): React.JSX.Element {
-
   return (
-    <SafeAreaView style={{ padding: '5%' }}>
-      <Text preset='headingLarge' style={{color: 'purple'}}>Testando</Text>
-    </SafeAreaView>
+    <ThemeProvider theme={theme}>
+      <LoginScreen />
+    </ThemeProvider>
   );
 }
-
-
 
 export default App;
