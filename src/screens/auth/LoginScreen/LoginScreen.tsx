@@ -1,14 +1,21 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../../routes/Routes';
 import {Text} from '../../../components/Text';
 import {Button} from '../../../components/Button/Button';
 import {TextInput} from '../../../components/TextInput/TextInput';
 import {PasswordInput} from '../../../components/PasswordInput/PasswordInput';
 import {Screen} from '../../../components/Screen/Screen';
 
-export function LoginScreen({navigation}) {
+type ScreenProps = NativeStackScreenProps<RootStackParamList, 'LoginScreen'>;
+
+export function LoginScreen({navigation}: ScreenProps) {
   function navigateToSignupScreen() {
     navigation.navigate('SignUpScreen');
+  }
+
+  function navigateToForgotPasswordScreen() {
+    navigation.navigate('ForgotPasswordScreen');
   }
 
   return (
@@ -33,7 +40,7 @@ export function LoginScreen({navigation}) {
         boxProps={{mb: 's10'}}
       />
 
-      <Text color="primary" preset="paragraphSmall" bold>
+      <Text onPress={navigateToForgotPasswordScreen} color="primary" preset="paragraphSmall" bold>
         Esqueci minha senha
       </Text>
 
