@@ -11,7 +11,7 @@ const RSText = createText();
 type RSTextProps = React.ComponentProps<typeof RSText>;
 //extraindo o tipo p/ passar para o TextProps
 
-interface TextProps extends RSTextProps {
+export interface TextProps extends RSTextProps {
   preset?: TextVariants;
   bold?: boolean;
   italic?: boolean;

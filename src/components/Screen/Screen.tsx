@@ -3,7 +3,7 @@ import {KeyboardAvoidingView, Platform} from 'react-native';
 import {Box, TouchableOpacityBox} from '../Box/Box';
 import {useAppSafeArea} from '../../hooks/useAppSafeArea';
 import {Icon} from '../Icon/Icon';
-import {Text} from '../Text';
+import {Text} from '../Text/Text';
 import {ScrollViewContainer, ViewContainer} from './components/ScreenContainer';
 import {useAppTheme} from '../../hooks/useAppTheme';
 import {useNavigation} from '@react-navigation/native';

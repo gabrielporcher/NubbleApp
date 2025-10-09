@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from '../Text';
+import {Text} from '../Text/Text';
 import {Theme, ThemeColors} from '../../theme/theme';
 import {ActivityIndicator} from '../ActivityIndicator/ActivityIndicator';
 import {TouchableOpacityBox, TouchableOpacityBoxProps} from '../Box/Box';
